@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Surface Work Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Project View -->
+        <div class="surface project-surface active">
+            <div class="surface-content">
+                <div class="project-header">
+                    <h1>Marketing Launch 2025</h1>
+                    <div class="project-status">Incomplete</div>
+                </div>
+                
+                <div class="task-table">
+                    <div class="table-header">
+                        <div class="col-task">Task name</div>
+                        <div class="col-assignee">Assignee</div>
+                        <div class="col-due">Due date</div>
+                        <div class="col-status">Status</div>
+                        <div class="col-priority">Priority</div>
+                    </div>
+                    
+                    <div class="task-row" data-task="task1">
+                        <div class="col-task">
+                            <div class="task-check"></div>
+                            <span class="task-name">Design System Setup</span>
+                        </div>
+                        <div class="col-assignee">
+                            <div class="assignee-avatar">SC</div>
+                            <span>Sue Cran...</span>
+                        </div>
+                        <div class="col-due">Today</div>
+                        <div class="col-status">
+                            <span class="status-tag spring">Spring launch</span>
+                        </div>
+                        <div class="col-priority">Medium</div>
+                    </div>
+                    
+                    <div class="task-row" data-task="task2">
+                        <div class="col-task">
+                            <div class="task-check"></div>
+                            <span class="task-name">API Integration</span>
+                        </div>
+                        <div class="col-assignee">
+                            <div class="assignee-avatar">SC</div>
+                            <span>Sue Cran...</span>
+                        </div>
+                        <div class="col-due">Jan 16</div>
+                        <div class="col-status">
+                            <span class="status-tag fall">Fall launch</span>
+                        </div>
+                        <div class="col-priority">High</div>
+                    </div>
+                    
+                    <div class="task-row" data-task="task3">
+                        <div class="col-task">
+                            <div class="task-check"></div>
+                            <span class="task-name">UI Polish</span>
+                        </div>
+                        <div class="col-assignee">
+                            <div class="assignee-avatar">SC</div>
+                            <span>Sue Cran...</span>
+                        </div>
+                        <div class="col-due">March 23</div>
+                        <div class="col-status">
+                            <span class="status-tag fy25">FY25</span>
+                        </div>
+                        <div class="col-priority">Low</div>
+                    </div>
+                    
+                    <div class="task-row" data-task="task4">
+                        <div class="col-task">
+                            <div class="task-check"></div>
+                            <span class="task-name">Market Research Analysis</span>
+                        </div>
+                        <div class="col-assignee">
+                            <div class="assignee-avatar">SC</div>
+                            <span>Sue Cran...</span>
+                        </div>
+                        <div class="col-due">Feb 4</div>
+                        <div class="col-status">
+                            <span class="status-tag spring">Spring launch</span>
+                        </div>
+                        <div class="col-priority">Medium</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Task View -->
+        <div class="surface task-surface">
+            <div class="surface-content">
+                <div class="task-header">
+                    <button class="back-button">
+                        <span class="back-icon">←</span>
+                        <span class="breadcrumb">Marketing Launch 2025</span>
+                    </button>
+                    
+                    <button class="activity-toggle">
+                        <span class="activity-icon">💬</span>
+                        <span>Activity</span>
+                    </button>
+                </div>
+                
+                <div class="task-title-section">
+                    <div class="task-check-large"></div>
+                    <h1 id="task-title-main">Task Details</h1>
+                </div>
+                
+                <div class="task-content">
+                    <div class="task-details">
+                        <h2 id="task-title">Task Details</h2>
+                        <p id="task-description">Task description will appear here</p>
+                        
+                        <div class="task-meta">
+                            <div class="meta-item">
+                                <label>Status:</label>
+                                <span>In Progress</span>
+                            </div>
+                            <div class="meta-item">
+                                <label>Due Date:</label>
+                                <span>Dec 15, 2024</span>
+                            </div>
+                            <div class="meta-item">
+                                <label>Assignee:</label>
+                                <div class="assignee-selector">
+                                    <div class="current-assignee" id="current-assignee">
+                                        <div class="assignee-avatar-large">CW</div>
+                                        <span>Curtis W.</span>
+                                        <span class="dropdown-arrow">▼</span>
+                                    </div>
+                                    <div class="assignee-dropdown" id="assignee-dropdown">
+                                        <div class="assignee-option" data-agent="alex">
+                                            <div class="assignee-avatar-large" style="background: #ff6b6b;">CS</div>
+                                            <div class="assignee-info">
+                                                <div class="assignee-name">Campaign Strategist AI</div>
+                                                <div class="assignee-role">Campaign Planning & Automation</div>
+                                            </div>
+                                        </div>
+                                        <div class="assignee-option" data-agent="sarah">
+                                            <div class="assignee-avatar-large" style="background: #4ecdc4;">CD</div>
+                                            <div class="assignee-info">
+                                                <div class="assignee-name">Creative Director AI</div>
+                                                <div class="assignee-role">Visual Design & Brand Identity</div>
+                                            </div>
+                                        </div>
+                                        <div class="assignee-option" data-agent="mike">
+                                            <div class="assignee-avatar-large" style="background: #45b7d1;">DA</div>
+                                            <div class="assignee-info">
+                                                <div class="assignee-name">Data Insights AI</div>
+                                                <div class="assignee-role">Analytics & Performance Tracking</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity Sidebar -->
+        <div class="activity-sidebar">
+            <div class="resize-handle"></div>
+            <div class="activity-header">
+                <h3>Activity</h3>
+                <button class="close-activity">
+                    <span>✕</span>
+                </button>
+            </div>
+            
+            <div class="activity-content">
+                <div class="activity-item">
+                    <div class="activity-avatar">CW</div>
+                    <div class="activity-text">
+                        <strong>Curtis</strong> updated the task status
+                        <div class="activity-time">2 hours ago</div>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-avatar">JS</div>
+                    <div class="activity-text">
+                        <strong>Jane</strong> added a comment
+                        <div class="activity-time">4 hours ago</div>
+                    </div>
+                </div>
+                
+                <div class="activity-item">
+                    <div class="activity-avatar">MB</div>
+                    <div class="activity-text">
+                        <strong>Mike</strong> assigned this task
+                        <div class="activity-time">1 day ago</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="activity-banner" id="activity-banner" style="display: none;">
+                <div class="banner-content">
+                    <div class="banner-icon">🤖</div>
+                    <div class="banner-text">
+                        <span id="banner-text">AI Agent is working on task</span>
+                        <div class="loading-dots">
+                            <span class="dot">.</span>
+                            <span class="dot">.</span>
+                            <span class="dot">.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="activity-input">
+                <input type="text" placeholder="Add a comment...">
+                <button>Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
