@@ -220,6 +220,64 @@
                 <button>Send</button>
             </div>
         </div>
+
+        <!-- AI Chat Feature -->
+        <div class="ai-chat-container" id="ai-chat-container">
+            <!-- Chat Button -->
+            <button class="ai-chat-button" id="ai-chat-button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2C6.48 2 2 6.48 2 12C2 13.54 2.38 14.99 3.06 16.26L2 22L7.74 20.94C9.01 21.62 10.46 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C10.74 20 9.54 19.75 8.46 19.32L8 19.12L4.9 19.9L5.68 16.8L5.48 16.34C5.05 15.26 4.8 14.06 4.8 12.8C4.8 7.37 8.37 3.8 12.8 3.8C17.23 3.8 20.8 7.37 20.8 12.8C20.8 17.23 17.23 20.8 12.8 20.8H12Z" fill="currentColor"/>
+                    <circle cx="8.5" cy="12" r="1" fill="currentColor"/>
+                    <circle cx="12" cy="12" r="1" fill="currentColor"/>
+                    <circle cx="15.5" cy="12" r="1" fill="currentColor"/>
+                </svg>
+                <span class="ai-chat-text">AI Assistant</span>
+            </button>
+
+            <!-- Chat Interface -->
+            <div class="ai-chat-interface" id="ai-chat-interface">
+                <div class="ai-chat-header">
+                    <div class="ai-chat-title">
+                        <div class="ai-avatar">🤖</div>
+                        <div class="ai-title-text">
+                            <h3>AI Assistant</h3>
+                            <span class="ai-status">Online</span>
+                        </div>
+                    </div>
+                    <button class="ai-chat-close" id="ai-chat-close">
+                        <span>✕</span>
+                    </button>
+                </div>
+
+                <div class="ai-chat-messages" id="ai-chat-messages">
+                    <div class="ai-message">
+                        <div class="ai-message-avatar">🤖</div>
+                        <div class="ai-message-content">
+                            <div class="ai-message-text">
+                                Hi! I'm your AI assistant. I can help you with task management, provide insights about your projects, suggest improvements, and answer questions about your workflow. How can I assist you today?
+                            </div>
+                            <div class="ai-message-time">Just now</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ai-chat-input-container">
+                    <div class="ai-quick-actions">
+                        <button class="ai-quick-action" data-action="summarize">📊 Summarize Project</button>
+                        <button class="ai-quick-action" data-action="suggest">💡 Suggest Tasks</button>
+                        <button class="ai-quick-action" data-action="analyze">📈 Analyze Progress</button>
+                    </div>
+                    <div class="ai-chat-input">
+                        <input type="text" id="ai-chat-input" placeholder="Ask me anything about your project...">
+                        <button class="ai-send-button" id="ai-send-button">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.01 21L23 12L2.01 3L2 10L17 12L2 14L2.01 21Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
